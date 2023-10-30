@@ -1,9 +1,9 @@
 import random
-from hangman_words import hangman_words_dict
-from difficulty_settings import difficulty_settings_dict
+import difficulty_sert
+word_list = ["apple", "banana", "pear", "strawberry", "orange"]
 
 class Hangman():
-    def __init__(self, word_list, num_lives):
+    def __init__(self, word_list, num_lives=5):
         self.word = random.choice(word_list)
         self.word_guessed = ['_' for letter in self.word]
         self.num_letters = len(set(self.word))
@@ -34,6 +34,8 @@ class Hangman():
 
 
     def ask_for_input(self):
+       #print(self.word)    
+       #print(f"self.num_letters: {self.num_letters}")
         print(' '.join(self.word_guessed))
         guess = input("Please enter a single letter: ")
         if guess.isalpha() == False or len(guess) != 1:
@@ -44,39 +46,8 @@ class Hangman():
             self.check_guess(guess)
             self.list_of_guesses.append(guess)
 
-        
-
-def main_menu():
-        print("Welcome to Hangman!")
-        while True:
-            user_difficulty = input("Would you like to play easy, medium, hard or extreme mode? \nPlease type E, M, H or X! ").lower()
-            if user_difficulty not in ['e', 'm', 'h', 'x']:
-                print("Invalid input, please type E, M, H, or X!")
-            elif user_difficulty == 'x':
-                print("You have chosen Extreme! Your word is extremely rarely guessed in Hangman, and you only have 3 lives!")
-                word_list = list(hangman_words_dict['x'])
-                num_lives = 3
-                break
-            else:
-                num_lives = difficulty_settings_dict[user_difficulty]
-                word_list = mode_menu()
-                break
-        return word_list, num_lives
-               
-
-def mode_menu():
-    while True:
-        user_mode = input("Would you like to guess an animal, vegetable or mineral? \nPlease type A, V or M! ").lower()
-        if user_mode not in ['a','v','m']:
-            print("Invalid input, please A, V or M!")
-        else:
-            word_list = (hangman_words_dict[user_mode])
-            break
-    return word_list
-
-
-def play_game():
-    word_list, num_lives = main_menu()
+def play_game(word_list):
+    num_lives = 5
     game = Hangman(word_list, num_lives)
     while True:
         if game.num_lives == 0:
@@ -88,5 +59,9 @@ def play_game():
             print("Congratulations. You won the game!")
             break
 
-play_game()
+play_game(word_list)
             
+
+        
+
+
