@@ -17,7 +17,7 @@ After executing the *hangman_game_main.py* file the user is prompted to choose t
 If Easy, Medium or Hard is chosen the user can then decide whether they want to guess an **Animal**, **Vegetable** or **Mineral**, with these categories being meant extremely literally (no fruits or non-mineral inorganic objects)!
 
 ### Playing the Game
-The user is then prompted to guess letters of an unknown word with it's length denoted by underscores, with correct guesses revealing the equivalent letters. It is possible to enter the entire word if it has been deciphered early. If the word is guessed before the user runs out of lives, they win the game!
+The user is then prompted to guess letters of an unknown word with its length denoted by underscores, with correct guesses revealing the equivalent letters. It is possible to enter the entire word if it has been deciphered early. If the word is guessed before the user runs out of lives, they win the game!
 
 Wrong guesses will result in a basic ASCII gallows artwork being drawn until all lives are up and a full stick figure is hanging from the gallows! At this point, the game has been lost.
 
