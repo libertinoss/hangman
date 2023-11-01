@@ -14,7 +14,7 @@ After executing the *hangman_game_main.py* file the user is prompted to choose t
 - **Hard** - This mode gives you **4** lives to guess the word
 - **Extreme** - This mode chooses a word a list of specially selected words that are extremely tricky to guess in Hangman with only **3** lives
 
-The user can then decide whether they want to guess an **Animal**, **Vegetable** or **Mineral** (except when chosing the Extreme option), with these categories being meant extremely literally (no fruits or non-mineral inorganic objects)!
+If Easy, Medium or Hard is chosen the user can then decide whether they want to guess an **Animal**, **Vegetable** or **Mineral**, with these categories being meant extremely literally (no fruits or non-mineral inorganic objects)!
 
 ### Playing the Game
 The user is then prompted to guess letters of an unknown word with it's length denoted by underscores, with correct guesses revealing the equivalent letters. It is possible to enter the entire word if it has been deciphered early. If the word is guessed before the user runs out of lives, they win the game!
