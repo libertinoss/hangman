@@ -163,6 +163,7 @@ def play_game():
     game = Hangman(word_list, num_lives)
     while True:
         if game.num_lives == 0:
+            print(f"The word was {game.word}")
             print(you_lost)
             break
         elif game.num_letters > 0:

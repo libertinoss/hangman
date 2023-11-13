@@ -1,5 +1,4 @@
 import random
-import difficulty_sert
 word_list = ["apple", "banana", "pear", "strawberry", "orange"]
 
 class Hangman():
